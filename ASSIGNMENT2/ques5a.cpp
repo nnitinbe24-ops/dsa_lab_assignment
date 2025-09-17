@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void CreateDiagonalmatrix(int diag[], int n) {
+    cout << "Enter diagonal elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> diag[i];
+    }
+}
+
+void displayDiagonalmatrix(int diag[], int n) {
+    cout << "Diagonal Matrix:\n";
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) cout << diag[k++] << " ";
+            else cout << 0 << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter size of matrix: ";
+    cin >> n;
+
+    int diag[n];
+    CreateDiagonalmatrix(diag, n);
+    displayDiagonalmatrix(diag, n);
+
+    return 0;
+}
